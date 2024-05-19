@@ -183,7 +183,12 @@
 
 .content p {
   font-size: 16px;
-  margin: 10px 0 15px;
+  margin: 10px 15px 15px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .content .btn {
@@ -265,8 +270,11 @@
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  margin-left: 25px;
   transition: all 0.3s ease-in-out;
+}
+
+.navigation span:not(:last-child) {
+  margin-right: 25px;
 }
 
 .navigation span:nth-child(1) {
